@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This feature implements **guides**, a GitHub Pages hub for **AWS walkthroughs and articles**.
+This feature implements **guides**, a GitHub Pages hub for **AWS articles and walkthroughs**.
 
 The hub is an **intro and index only**. Full walkthrough content stays on each source repo Pages site (or external article URL such as DEV.to). Hub entries are short dated posts with category, tags, summary, and outbound links.
 
@@ -126,4 +126,4 @@ The hub is an **intro and index only**. Full walkthrough content stays on each s
 
 1. THE repository SHALL include `.gitignore` for Node and Astro build artifacts
 2. THE repository SHALL include `package.json` with `dev`, `build`, and `preview` scripts
-3. THE repository description target SHALL be: `Dated hub for AWS walkthroughs and articles with categories linking to full GitHub Pages content`
+3. THE repository description target SHALL be: `Dated hub for AWS articles and walkthroughs with categories linking to full GitHub Pages content`

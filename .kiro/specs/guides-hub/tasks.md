@@ -2,7 +2,7 @@
 
 ## Overview
 
-Build a fully set up Astro GitHub Pages hub for AWS walkthroughs and articles. Content is manual Markdown. Ship working layouts, home filters/search/pagination, category indexes, theme toggle, SEO/RSS/sitemap, Pages workflow, and docs.
+Build a fully set up Astro GitHub Pages hub for AWS articles and walkthroughs. Content is manual Markdown. Ship working layouts, home filters/search/pagination, category indexes, theme toggle, SEO/RSS/sitemap, Pages workflow, and docs.
 
 ## Tasks
 

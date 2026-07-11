@@ -1,8 +1,8 @@
 # guides
 
-Dated hub for AWS walkthroughs and articles with categories linking to full GitHub Pages content.
+Dated hub for articles and walkthroughs with categories linking to full GitHub Pages content.
 
-Short intros live here. Full walkthroughs and articles stay on their source repo Pages sites (or external posts such as DEV.to).
+Short intros live here. Full articles and walkthroughs stay on their source repo Pages sites (or external posts such as DEV.to).
 
 **Live site:** https://jajera.github.io/guides/
 

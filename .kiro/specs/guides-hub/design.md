@@ -2,7 +2,7 @@
 
 ## Overview
 
-**guides** is a static Astro hub that indexes AWS walkthroughs and articles. Each content file is a short intro with metadata. Full guides remain on source repo Pages sites or external article URLs (for example DEV.to).
+**guides** is a static Astro hub that indexes AWS articles and walkthroughs. Each content file is a short intro with metadata. Full guides remain on source repo Pages sites or external article URLs (for example DEV.to).
 
 ### Design Goals
 
@@ -38,18 +38,18 @@ flowchart LR
 
 ### Stack
 
-| Piece | Choice |
-|-------|--------|
-| Framework | Astro 5 (static output) |
-| Content | Astro content collections + Markdown + Zod |
-| Styling | Global CSS variables; light/dark via `data-theme` |
-| Search / filters | Client-side on home (no search backend) |
-| Pagination | Client-side, 12 per page, URL `?page=` |
-| SEO | Canonical, Open Graph, Twitter cards, `public/og.png` |
-| Feeds | `@astrojs/sitemap`, `@astrojs/rss` |
-| Hosting | GitHub Pages |
-| Deploy | GitHub Actions (`actions/deploy-pages`) |
-| Content sync | Manual |
+| Piece            | Choice                                                |
+| ---------------- | ----------------------------------------------------- |
+| Framework        | Astro 5 (static output)                               |
+| Content          | Astro content collections + Markdown + Zod            |
+| Styling          | Global CSS variables; light/dark via `data-theme`     |
+| Search / filters | Client-side on home (no search backend)               |
+| Pagination       | Client-side, 12 per page, URL `?page=`                |
+| SEO              | Canonical, Open Graph, Twitter cards, `public/og.png` |
+| Feeds            | `@astrojs/sitemap`, `@astrojs/rss`                    |
+| Hosting          | GitHub Pages                                          |
+| Deploy           | GitHub Actions (`actions/deploy-pages`)               |
+| Content sync     | Manual                                                |
 
 ### Site map
 
@@ -66,16 +66,16 @@ Paths below are under site base `/guides/`.
 
 ### Category set (v1)
 
-| Category | Examples |
-|----------|----------|
+| Category     | Examples                                              |
+| ------------ | ----------------------------------------------------- |
 | `networking` | Private connectivity, interconnect, IPAM, VPC Lattice |
-| `dns` | Route 53 multi-account |
-| `serverless` | Event-driven, Lambda, IAM Policy Guard |
-| `storage` | S3 Files, annotations, vectors |
-| `containers` | ECS Express Mode, EKS decision guides |
-| `iot` | ESP32 / AWS IoT |
-| `tooling` | Amazon Q, GitHub Actions |
-| `general` | Catch-all |
+| `dns`        | Route 53 multi-account                                |
+| `serverless` | Event-driven, Lambda, IAM Policy Guard                |
+| `storage`    | S3 Files, annotations, vectors                        |
+| `containers` | ECS Express Mode, EKS decision guides                 |
+| `iot`        | ESP32 / AWS IoT                                       |
+| `tooling`    | Amazon Q, GitHub Actions                              |
+| `general`    | Catch-all                                             |
 
 ### Type set
 
@@ -100,7 +100,6 @@ walkthrough_url: https://jajera.github.io/route53-classic-multi-account-walkthro
 demo_url: https://github.com/jajera/route53-classic-multi-account-walkthrough
 draft: false
 ---
-
 Short intro body in Markdown.
 ```
 
@@ -217,13 +216,13 @@ Built asset URLs and internal links work under `/guides/` base path. Entry detai
 
 ## Error handling
 
-| Scenario | Handling |
-|----------|----------|
-| Missing required front matter | Astro content collection validation fails at build |
-| Unknown category | Schema enum rejects at build |
-| Broken outbound URL | Author responsibility; spot-check before release |
-| Empty category | Category page can render empty state; index may show zero count |
-| Favicon request | Served from `public/`; avoids `[slug]` catch-all warnings |
+| Scenario                      | Handling                                                        |
+| ----------------------------- | --------------------------------------------------------------- |
+| Missing required front matter | Astro content collection validation fails at build              |
+| Unknown category              | Schema enum rejects at build                                    |
+| Broken outbound URL           | Author responsibility; spot-check before release                |
+| Empty category                | Category page can render empty state; index may show zero count |
+| Favicon request               | Served from `public/`; avoids `[slug]` catch-all warnings       |
 
 ## Testing strategy
 

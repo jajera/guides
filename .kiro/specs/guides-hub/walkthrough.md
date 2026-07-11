@@ -4,7 +4,7 @@ Spec-level operator guide. Source for `docs/walkthrough.md` per `.config.kiro`.
 
 ## Purpose
 
-Fully set up Astro hub for AWS walkthroughs and articles. Manual Markdown content. GitHub Pages hosting. Home search/filters/pagination and light/dark theme.
+Fully set up Astro hub for AWS articles and walkthroughs. Manual Markdown content. GitHub Pages hosting. Home search/filters/pagination and light/dark theme.
 
 ## Local run
 

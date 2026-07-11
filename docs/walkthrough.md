@@ -4,7 +4,7 @@ Operator guide for the **guides** Astro hub: local run, adding entries, and GitH
 
 ## Purpose
 
-Dated hub for AWS walkthroughs and articles. Each Markdown entry is a short intro with metadata; full content stays on the source repo’s GitHub Pages site or an external article URL.
+Dated hub for articles and walkthroughs. Each Markdown entry is a short intro with metadata; full content stays on the source repo’s GitHub Pages site or an external article URL.
 
 Live URL (after Pages is enabled): https://jajera.github.io/guides/
 
@@ -45,8 +45,8 @@ Preview serves under `/guides/`.
 ---
 title: Your guide title
 date: 2026-07-11
-type: walkthrough   # or article
-category: networking  # see categories below
+type: walkthrough # or article
+category: networking # see categories below
 tags: [example, tag]
 summary: One or two sentences for cards and SEO.
 walkthrough_url: https://jajera.github.io/your-walkthrough/
@@ -54,19 +54,18 @@ demo_url: https://github.com/jajera/your-demo
 # article_url: https://dev.to/jajera/your-article
 draft: false
 ---
-
 Short intro in Markdown. Link out via the CTA buttons from front matter URLs.
 ```
 
 ### Required fields
 
-| Field | Notes |
-|-------|--------|
-| `title` | Display title |
-| `date` | ISO date (`YYYY-MM-DD`) |
-| `type` | `walkthrough` or `article` |
-| `category` | One of the enums below |
-| `summary` | Card / meta description |
+| Field      | Notes                      |
+| ---------- | -------------------------- |
+| `title`    | Display title              |
+| `date`     | ISO date (`YYYY-MM-DD`)    |
+| `type`     | `walkthrough` or `article` |
+| `category` | One of the enums below     |
+| `summary`  | Card / meta description    |
 
 ### Optional fields
 
@@ -85,14 +84,14 @@ Published entries should usually include at least one of `walkthrough_url` or `a
 
 ## Site map
 
-| Path | Purpose |
-|------|---------|
-| `/guides/` | Home — search, type/category filters, pagination |
-| `/guides/[slug]/` | Entry detail |
-| `/guides/categories/` | Category index |
-| `/guides/categories/[category]/` | Entries in a category |
-| `/guides/rss.xml` | RSS feed |
-| `/guides/sitemap-index.xml` | Sitemap |
+| Path                             | Purpose                                          |
+| -------------------------------- | ------------------------------------------------ |
+| `/guides/`                       | Home — search, type/category filters, pagination |
+| `/guides/[slug]/`                | Entry detail                                     |
+| `/guides/categories/`            | Category index                                   |
+| `/guides/categories/[category]/` | Entries in a category                            |
+| `/guides/rss.xml`                | RSS feed                                         |
+| `/guides/sitemap-index.xml`      | Sitemap                                          |
 
 ## Home UX notes
 
@@ -112,16 +111,16 @@ The workflow builds with `npm ci` and deploys `dist/`. `public/.nojekyll` is cop
 
 ## Troubleshooting
 
-| Symptom | Check |
-|---------|--------|
-| Build fails on front matter | Required fields / enum values; Zod schema in `src/content/config.ts` |
-| Draft still visible | Confirm `draft: true` and that you are not looking at a stale preview |
-| Assets 404 under Pages | `astro.config.mjs` must keep `base: '/guides/'` |
-| Card links look like `/guides/guides/...` | Detail route must be `src/pages/[slug].astro`, not `pages/guides/[slug].astro` |
-| Search does not hide cards | Ensure `.entry-list > li[hidden] { display: none; }` (flex overrides `hidden` otherwise) |
-| Blank Pages deploy | Pages source must be **GitHub Actions**, not “Deploy from a branch” |
-| `npm ci` fails in CI | Commit an up-to-date `package-lock.json` after `npm install` |
-| `astro: Permission denied` | Reinstall deps (`rm -rf node_modules && npm install`); do not copy `node_modules` between machines |
+| Symptom                                   | Check                                                                                              |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Build fails on front matter               | Required fields / enum values; Zod schema in `src/content/config.ts`                               |
+| Draft still visible                       | Confirm `draft: true` and that you are not looking at a stale preview                              |
+| Assets 404 under Pages                    | `astro.config.mjs` must keep `base: '/guides/'`                                                    |
+| Card links look like `/guides/guides/...` | Detail route must be `src/pages/[slug].astro`, not `pages/guides/[slug].astro`                     |
+| Search does not hide cards                | Ensure `.entry-list > li[hidden] { display: none; }` (flex overrides `hidden` otherwise)           |
+| Blank Pages deploy                        | Pages source must be **GitHub Actions**, not “Deploy from a branch”                                |
+| `npm ci` fails in CI                      | Commit an up-to-date `package-lock.json` after `npm install`                                       |
+| `astro: Permission denied`                | Reinstall deps (`rm -rf node_modules && npm install`); do not copy `node_modules` between machines |
 
 ## Intentionally excluded (v1)
 

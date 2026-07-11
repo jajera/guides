@@ -1,0 +1,14 @@
+{
+  "specId": "guides-hub-2026-07-11",
+  "workflowType": "requirements-first",
+  "specType": "feature",
+  "status": "implemented",
+  "documents": {
+    "requirements": "requirements.md",
+    "design": "design.md",
+    "tasks": "tasks.md",
+    "walkthrough": "walkthrough.md"
+  },
+  "walkthroughOutput": "docs/walkthrough.md",
+  "notes": "Updated to match shipped hub: [slug] routes, home search/filters/pagination, theme toggle, SEO/RSS/sitemap, no /types pages."
+}

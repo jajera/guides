@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { GUIDE_CATEGORIES } from '../../content/config';
+import { getPublishedGuides } from '../../lib/guides';
+import { withBase } from '../../lib/paths';
+
+const entries = await getPublishedGuides();
+const counts = Object.fromEntries(
+  GUIDE_CATEGORIES.map((category) => [
+    category,
+    entries.filter((e) => e.data.category === category).length,
+  ]),
+) as Record<(typeof GUIDE_CATEGORIES)[number], number>;
+---
+
+<BaseLayout title="Categories" description="Browse AWS guides by category.">
+  <h1 class="page-title">Categories</h1>
+  <p class="page-lede">Filter the hub by topic area.</p>
+
+  <ul class="category-grid">
+    {GUIDE_CATEGORIES.map((category) => (
+      <li>
+        <a href={withBase(`categories/${category}/`)}>
+          {category}
+          <span class="category-grid__count">{counts[category]} {counts[category] === 1 ? 'entry' : 'entries'}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

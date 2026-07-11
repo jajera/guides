@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EntryCard from '../components/EntryCard.astro';
+import { GUIDE_CATEGORIES } from '../content/config';
+import { getPublishedGuides } from '../lib/guides';
+
+const entries = await getPublishedGuides();
+const usedCategories = GUIDE_CATEGORIES.filter((category) =>
+  entries.some((entry) => entry.data.category === category),
+);
+const pageSize = 10;
+---
+
+<BaseLayout title="Guides" description="Dated hub for AWS walkthroughs and articles with categories linking to full GitHub Pages content.">
+  <div class="feed-heading">
+    <div>
+      <p class="eyebrow">The latest</p>
+      <h1 class="page-title">Guides</h1>
+    </div>
+
+    {entries.length > 0 && (
+      <div class="feed-filters">
+        <label class="feed-filter">
+          Type
+          <select id="filter-type" name="type">
+            <option value="ALL">All types</option>
+            <option value="walkthrough">Walkthrough</option>
+            <option value="article">Article</option>
+          </select>
+        </label>
+        <label class="feed-filter">
+          Category
+          <select id="filter-category" name="category">
+            <option value="ALL">All categories</option>
+            {usedCategories.map((category) => (
+              <option value={category}>{category}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+    )}
+  </div>
+
+  <p class="page-lede">
+    Open the source guide for the full write-up.
+  </p>
+
+  {entries.length === 0 ? (
+    <p class="empty-state">No published entries yet.</p>
+  ) : (
+    <>
+      <p id="filter-status" class="filter-status" role="status" aria-live="polite" hidden>
+        No entries match these filters.
+      </p>
+      <ul class="entry-list" id="entry-list" data-page-size={pageSize}>
+        {entries.map((entry) => <EntryCard entry={entry} />)}
+      </ul>
+      <nav id="pagination" class="pagination" aria-label="Guide pages" hidden>
+        <button type="button" class="pagination__btn" id="pagination-prev" aria-label="Previous page">
+          Previous
+        </button>
+        <p class="pagination__status" id="pagination-status" aria-live="polite"></p>
+        <button type="button" class="pagination__btn" id="pagination-next" aria-label="Next page">
+          Next
+        </button>
+      </nav>
+      <script is:inline>
+        (function () {
+          const typeSelect = document.getElementById('filter-type');
+          const categorySelect = document.getElementById('filter-category');
+          const searchInput = document.getElementById('site-search-input');
+          const status = document.getElementById('filter-status');
+          const list = document.getElementById('entry-list');
+          const pagination = document.getElementById('pagination');
+          const prevBtn = document.getElementById('pagination-prev');
+          const nextBtn = document.getElementById('pagination-next');
+          const pageStatus = document.getElementById('pagination-status');
+          const cards = Array.from(document.querySelectorAll('#entry-list > li'));
+
+          if (!typeSelect || !categorySelect || !searchInput || !status || !list || !pagination) return;
+
+          const pageSize = Number(list.dataset.pageSize) || 12;
+          const params = new URLSearchParams(window.location.search);
+          const initialQuery = params.get('q');
+          if (initialQuery) searchInput.value = initialQuery;
+
+          let currentPage = Math.max(1, Number(params.get('page')) || 1);
+          let matched = [];
+
+          function syncUrl(query) {
+            const url = new URL(window.location.href);
+            if (query) url.searchParams.set('q', query);
+            else url.searchParams.delete('q');
+            if (currentPage > 1) url.searchParams.set('page', String(currentPage));
+            else url.searchParams.delete('page');
+            history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+          }
+
+          function renderPage() {
+            const total = matched.length;
+            const totalPages = Math.max(1, Math.ceil(total / pageSize));
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            const start = (currentPage - 1) * pageSize;
+            const end = start + pageSize;
+
+            cards.forEach((card) => {
+              card.hidden = true;
+            });
+
+            matched.forEach((card, index) => {
+              card.hidden = !(index >= start && index < end);
+            });
+
+            status.hidden = total > 0;
+            pagination.hidden = total <= pageSize;
+
+            if (total === 0) {
+              pageStatus.textContent = '';
+            } else {
+              const from = start + 1;
+              const to = Math.min(end, total);
+              pageStatus.textContent = `Showing ${from}–${to} of ${total}`;
+            }
+
+            prevBtn.disabled = currentPage <= 1;
+            nextBtn.disabled = currentPage >= totalPages;
+          }
+
+          function applyFilters({ resetPage = false } = {}) {
+            const type = typeSelect.value;
+            const category = categorySelect.value;
+            const query = searchInput.value.trim().toLowerCase();
+
+            matched = cards.filter((card) => {
+              const matchType = type === 'ALL' || card.dataset.type === type;
+              const matchCategory = category === 'ALL' || card.dataset.category === category;
+              const haystack = (card.getAttribute('data-search') || '').toLowerCase();
+              const matchSearch = !query || haystack.includes(query);
+              return matchType && matchCategory && matchSearch;
+            });
+
+            if (resetPage) currentPage = 1;
+            renderPage();
+            syncUrl(searchInput.value.trim());
+          }
+
+          typeSelect.addEventListener('change', () => applyFilters({ resetPage: true }));
+          categorySelect.addEventListener('change', () => applyFilters({ resetPage: true }));
+          searchInput.addEventListener('input', () => applyFilters({ resetPage: true }));
+          searchInput.addEventListener('search', () => applyFilters({ resetPage: true }));
+          prevBtn.addEventListener('click', () => {
+            if (currentPage <= 1) return;
+            currentPage -= 1;
+            renderPage();
+            syncUrl(searchInput.value.trim());
+          });
+          nextBtn.addEventListener('click', () => {
+            const totalPages = Math.max(1, Math.ceil(matched.length / pageSize));
+            if (currentPage >= totalPages) return;
+            currentPage += 1;
+            renderPage();
+            syncUrl(searchInput.value.trim());
+          });
+
+          applyFilters();
+        })();
+      </script>
+    </>
+  )}
+</BaseLayout>

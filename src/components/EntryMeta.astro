@@ -1,0 +1,35 @@
+---
+interface Props {
+  type: 'walkthrough' | 'article';
+  category: string;
+  date: Date;
+  tags?: string[];
+  showTags?: boolean;
+  linkCategory?: boolean;
+}
+
+import { withBase } from '../lib/paths';
+
+const { type, category, date, tags = [], showTags = false, linkCategory = true } = Astro.props;
+const formatted = date.toLocaleDateString('en-CA', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+const categoryHref = withBase(`categories/${category}/`);
+---
+
+<div class="entry-meta">
+  <span class={`badge badge--${type}`}>{type}</span>
+  {linkCategory ? (
+    <a class="badge badge--category" href={categoryHref}>{category}</a>
+  ) : (
+    <span class="badge badge--category">{category}</span>
+  )}
+  <time datetime={date.toISOString()}>{formatted}</time>
+</div>
+{showTags && tags.length > 0 && (
+  <ul class="tag-list">
+    {tags.map((tag) => <li>{tag}</li>)}
+  </ul>
+)}

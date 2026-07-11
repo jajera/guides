@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryCard from '../../components/EntryCard.astro';
+import { GUIDE_CATEGORIES, type GuideCategory } from '../../content/config';
+import { getPublishedGuides } from '../../lib/guides';
+
+export function getStaticPaths() {
+  return GUIDE_CATEGORIES.map((category) => ({
+    params: { category },
+  }));
+}
+
+const { category } = Astro.params as { category: GuideCategory };
+const entries = (await getPublishedGuides()).filter((e) => e.data.category === category);
+---
+
+<BaseLayout title={category} description={`AWS guides in the ${category} category.`}>
+  <h1 class="page-title">{category}</h1>
+  <p class="page-lede">Published entries in this category.</p>
+
+  {entries.length === 0 ? (
+    <p class="empty-state">No published entries in this category yet.</p>
+  ) : (
+    <ul class="entry-list">
+      {entries.map((entry) => <EntryCard entry={entry} />)}
+    </ul>
+  )}
+</BaseLayout>

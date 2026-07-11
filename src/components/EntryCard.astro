@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import EntryMeta from './EntryMeta.astro';
+import { withBase } from '../lib/paths';
+
+interface Props {
+  entry: CollectionEntry<'guides'>;
+}
+
+const { entry } = Astro.props;
+const { title, summary, type, category, date } = entry.data;
+const href = withBase(`${entry.slug}/`);
+const searchText = [title, summary, type, category, ...(entry.data.tags ?? [])].join(' ').toLowerCase();
+---
+
+<li data-type={type} data-category={category} data-search={searchText}>
+  <a class="entry-card" href={href}>
+    <EntryMeta type={type} category={category} date={date} linkCategory={false} />
+    <h2 class="entry-card__title">{title}</h2>
+    <p class="entry-card__summary">{summary}</p>
+  </a>
+</li>

@@ -69,9 +69,9 @@ Short intro in Markdown. Link out via the CTA buttons from front matter URLs.
 
 ### Optional fields
 
-`tags`, `walkthrough_url`, `demo_url`, `article_url`, `draft` (default `false`)
+`tags`, `walkthrough_url`, `demo_url`, `article_url`, `video_url`, `social_url`, `draft` (default `false`)
 
-Published entries should usually include at least one of `walkthrough_url` or `article_url`.
+Published entries should usually include at least one of `walkthrough_url`, `article_url`, or `video_url`.
 
 ## Categories
 

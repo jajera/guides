@@ -18,7 +18,7 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, summary, type, category, date, tags, walkthrough_url, article_url, demo_url } = entry.data;
+const { title, summary, type, category, date, tags, walkthrough_url, article_url, demo_url, video_url, social_url } = entry.data;
 ---
 
 <BaseLayout title={title} description={summary}>
@@ -29,6 +29,12 @@ const { title, summary, type, category, date, tags, walkthrough_url, article_url
     <div class="prose">
       <Content />
     </div>
-    <CtaLinks walkthrough_url={walkthrough_url} article_url={article_url} demo_url={demo_url} />
+    <CtaLinks
+      walkthrough_url={walkthrough_url}
+      article_url={article_url}
+      demo_url={demo_url}
+      video_url={video_url}
+      social_url={social_url}
+    />
   </article>
 </BaseLayout>

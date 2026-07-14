@@ -3,13 +3,17 @@ interface Props {
   walkthrough_url?: string;
   article_url?: string;
   demo_url?: string;
+  video_url?: string;
+  social_url?: string;
 }
 
-const { walkthrough_url, article_url, demo_url } = Astro.props;
+const { walkthrough_url, article_url, demo_url, video_url, social_url } = Astro.props;
 const links = [
   walkthrough_url && { href: walkthrough_url, label: 'Open walkthrough', primary: true },
   article_url && { href: article_url, label: 'Read article', primary: !walkthrough_url },
+  video_url && { href: video_url, label: 'Watch video', primary: !walkthrough_url && !article_url },
   demo_url && { href: demo_url, label: 'View demo', primary: false },
+  social_url && { href: social_url, label: 'Social post', primary: false },
 ].filter(Boolean) as { href: string; label: string; primary: boolean }[];
 ---
 

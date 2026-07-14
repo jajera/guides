@@ -23,6 +23,8 @@ const guides = defineCollection({
     walkthrough_url: z.string().url().optional(),
     demo_url: z.string().url().optional(),
     article_url: z.string().url().optional(),
+    video_url: z.string().url().optional(),
+    social_url: z.string().url().optional(),
     draft: z.boolean().default(false),
   }),
 });

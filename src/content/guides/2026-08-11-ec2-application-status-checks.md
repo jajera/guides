@@ -1,10 +1,10 @@
 ---
-title: EC2 application status checks
+title: Amazon EC2 application status checks
 date: 2026-08-11
 type: walkthrough
 category: general
 tags: [ec2, autoscaling, monitoring, health-checks]
-summary: In-VPC HTTP probes for EC2 that sit next to instance status checks, price by managed ENI, and can replace impaired Auto Scaling instances.
+summary: Amazon EC2 application status checks walkthrough for in network HTTP probes and optional Auto Scaling replacement.
 walkthrough_url: https://jajera.github.io/ec2-application-status-checks-walkthrough/
 demo_url: https://github.com/jajera/ec2-application-status-checks-walkthrough
 draft: false

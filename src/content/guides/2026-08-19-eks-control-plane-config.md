@@ -6,7 +6,6 @@ category: containers
 tags: [eks, kubernetes, scheduler, hpa, kube-apiserver]
 summary: Amazon EKS control plane configuration parameters walkthrough.
 walkthrough_url: https://jajera.github.io/eks-control-plane-config/
-demo_url: https://github.com/jajera/eks-control-plane-config
 draft: false
 ---
 

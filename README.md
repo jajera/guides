@@ -4,7 +4,7 @@ Dated hub for articles and walkthroughs with categories linking to full GitHub P
 
 Short intros live here. Full articles and walkthroughs stay on their source repo Pages sites (or external posts such as DEV.to).
 
-**Live site:** https://jajera.github.io/guides/
+**Live site:** https://guides.johna.kiwi/
 
 ## Stack
 

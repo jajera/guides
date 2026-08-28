@@ -1,5 +1,6 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
+import { withBase } from "../lib/paths";
 
 export async function GET(context) {
   const entries = await getCollection("guides", ({ data }) => !data.draft);
@@ -16,7 +17,7 @@ export async function GET(context) {
       title: entry.data.title,
       description: entry.data.summary,
       pubDate: entry.data.date,
-      link: `/guides/${entry.slug}/`,
+      link: withBase(`${entry.slug}/`),
       categories: [
         entry.data.type,
         entry.data.category,

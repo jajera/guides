@@ -6,7 +6,7 @@ Operator guide for the **guides** Astro hub: local run, adding entries, and GitH
 
 Dated hub for articles and walkthroughs. Each Markdown entry is a short intro with metadata; full content stays on the source repo’s GitHub Pages site or an external article URL.
 
-Live URL (after Pages is enabled): https://jajera.github.io/guides/
+Live URL (after Pages is enabled): https://guides.johna.kiwi/
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-Open the URL Astro prints (usually `http://localhost:4321/guides/`).
+Open the URL Astro prints (usually `http://localhost:4321/`).
 
 To verify the production base path:
 
@@ -29,7 +29,7 @@ npm run build
 npm run preview
 ```
 
-Preview serves under `/guides/`.
+Preview serves at the site root (`/`).
 
 ## Add a new entry
 
@@ -84,14 +84,14 @@ Published entries should usually include at least one of `walkthrough_url`, `art
 
 ## Site map
 
-| Path                             | Purpose                                          |
-| -------------------------------- | ------------------------------------------------ |
-| `/guides/`                       | Home — search, type/category filters, pagination |
-| `/guides/[slug]/`                | Entry detail                                     |
-| `/guides/categories/`            | Category index                                   |
-| `/guides/categories/[category]/` | Entries in a category                            |
-| `/guides/rss.xml`                | RSS feed                                         |
-| `/guides/sitemap-index.xml`      | Sitemap                                          |
+| Path                       | Purpose                                          |
+| -------------------------- | ------------------------------------------------ |
+| `/`                        | Home — search, type/category filters, pagination |
+| `/[slug]/`                 | Entry detail                                     |
+| `/categories/`             | Category index                                   |
+| `/categories/[category]/`  | Entries in a category                            |
+| `/rss.xml`                 | RSS feed                                         |
+| `/sitemap-index.xml`       | Sitemap                                          |
 
 ## Home UX notes
 
@@ -105,7 +105,7 @@ Published entries should usually include at least one of `walkthrough_url`, `art
 1. Push this repo to `jajera/guides` (public).
 2. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 3. Push to `main` (or run **Deploy to GitHub Pages** manually).
-4. Site: https://jajera.github.io/guides/
+4. Site: https://guides.johna.kiwi/
 
 The workflow builds with `npm ci` and deploys `dist/`. `public/.nojekyll` is copied into the output so Jekyll does not process the site.
 
@@ -115,7 +115,7 @@ The workflow builds with `npm ci` and deploys `dist/`. `public/.nojekyll` is cop
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Build fails on front matter               | Required fields / enum values; Zod schema in `src/content/config.ts`                               |
 | Draft still visible                       | Confirm `draft: true` and that you are not looking at a stale preview                              |
-| Assets 404 under Pages                    | `astro.config.mjs` must keep `base: '/guides/'`                                                    |
+| Assets 404 under Pages                    | `astro.config.mjs` must keep `site: https://guides.johna.kiwi` and `base: '/'` on the custom domain |
 | Card links look like `/guides/guides/...` | Detail route must be `src/pages/[slug].astro`, not `pages/guides/[slug].astro`                     |
 | Search does not hide cards                | Ensure `.entry-list > li[hidden] { display: none; }` (flex overrides `hidden` otherwise)           |
 | Blank Pages deploy                        | Pages source must be **GitHub Actions**, not “Deploy from a branch”                                |
@@ -128,7 +128,6 @@ The workflow builds with `npm ci` and deploys `dist/`. `public/.nojekyll` is cop
 - CMS sync
 - Pagefind / server search
 - Dedicated `/types/*` pages
-- Custom domain setup (optional later)
 - S3 / CloudFront hosting
 
 ## Smoke checklist
@@ -139,6 +138,6 @@ The workflow builds with `npm ci` and deploys `dist/`. `public/.nojekyll` is cop
 - [ ] Theme toggle switches light/dark and persists
 - [ ] One category page renders
 - [ ] Entry CTAs open walkthrough / article / demo URLs
-- [ ] `/guides/rss.xml` and sitemap exist in `dist/`
+- [ ] `/rss.xml` and sitemap exist in `dist/`
 - [ ] `.nojekyll` present under `dist/` after build
 - [ ] `public/favicon.svg` is small (not a megabyte-scale export)

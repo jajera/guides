@@ -31,6 +31,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          # Public S3 catalogue from johna-kiwi-infra Lambda (hooks overlay MD summary).
+          CATALOGUE_URL: https://johna-kiwi-content.s3.ap-southeast-2.amazonaws.com/catalogue.json
         run: npm run build
 
       - name: Upload Pages artifact

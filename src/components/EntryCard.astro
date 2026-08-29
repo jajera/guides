@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { GuideEntry } from '../lib/guides';
 import EntryMeta from './EntryMeta.astro';
 import { withBase } from '../lib/paths';
 
 interface Props {
-  entry: CollectionEntry<'guides'>;
+  entry: GuideEntry;
 }
 
 const { entry } = Astro.props;

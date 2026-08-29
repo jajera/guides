@@ -16,12 +16,6 @@
         "isDefault": true
       },
       "problemMatcher": []
-    },
-    {
-      "label": "validate",
-      "type": "shell",
-      "command": "npm run validate",
-      "problemMatcher": []
     }
   ]
 }

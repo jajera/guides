@@ -37,7 +37,9 @@ Preview serves at the site root (`/`).
 2. Fill required front matter.
 3. Add outbound URLs and a short body.
 4. Set `draft: false` when ready to publish.
-5. Commit and push to `main`.
+5. Commit and merge to `main`.
+
+That merge deploys Pages and runs **Catalogue sync**: frontmatter is exported and the johna.kiwi content Lambda is invoked so Labs membership updates without editing `catalogue.yaml` or applying Terraform.
 
 ### Front matter template
 
@@ -48,7 +50,7 @@ date: 2026-07-11
 type: walkthrough # or article
 category: networking # see categories below
 tags: [example, tag]
-summary: Fallback card copy; catalogue hook overlays this when the slug matches.
+summary: Card copy; synced to the catalogue as hook on main merge.
 walkthrough_url: https://jajera.github.io/your-walkthrough/
 demo_url: https://github.com/jajera/your-demo
 # article_url: https://dev.to/jajera/your-article
@@ -65,7 +67,7 @@ Short intro in Markdown. Link out via the CTA buttons from front matter URLs.
 | `date`     | ISO date (`YYYY-MM-DD`)    |
 | `type`     | `walkthrough` or `article` |
 | `category` | One of the enums below     |
-| `summary`  | Fallback card / meta copy (catalogue `hook` wins when present) |
+| `summary`  | Card / meta copy (also catalogue `hook` after sync) |
 
 ### Optional fields
 
@@ -110,6 +112,8 @@ Published entries should usually include at least one of `walkthrough_url`, `art
 
 The workflow builds with `npm ci`, sets `CATALOGUE_URL` to the public S3 catalogue, and deploys `dist/`. `public/.nojekyll` is copied into the output so Jekyll does not process the site.
 
+Catalogue sync (separate workflow on the same `main` push) requires repository variable `CATALOGUE_SYNC_ROLE_ARN` (Terraform output `catalogue_guides_sync_role_arn` from johna-kiwi-infra). Preview locally: `node scripts/export-registry.mjs`.
+
 ## Troubleshooting
 
 | Symptom                                   | Check                                                                                              |
@@ -122,6 +126,8 @@ The workflow builds with `npm ci`, sets `CATALOGUE_URL` to the public S3 catalog
 | Blank Pages deploy                        | Pages source must be **GitHub Actions**, not “Deploy from a branch”                                |
 | `npm ci` fails in CI                      | Commit an up-to-date `package-lock.json` after `npm install`                                       |
 | `astro: Permission denied`                | Reinstall deps (`rm -rf node_modules && npm install`); do not copy `node_modules` between machines |
+| Catalogue sync fails                      | Set `CATALOGUE_SYNC_ROLE_ARN`; confirm johna-kiwi-infra OIDC role + Lambda apply; check invoke logs |
+| johna.kiwi Labs missing new guide         | Guide must be non-draft with a URL; sync workflow green on `main`; Amplify rebuild after Lambda    |
 
 ## Intentionally excluded (v1)
 
@@ -129,7 +135,6 @@ The workflow builds with `npm ci`, sets `CATALOGUE_URL` to the public S3 catalog
 - CMS sync
 - Pagefind / server search
 - Dedicated `/types/*` pages
-- Lambda `repository_dispatch` rebuild when catalogue refreshes (rebuild on guides push only for now)
 
 ## Smoke checklist
 

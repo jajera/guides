@@ -48,7 +48,7 @@ date: 2026-07-11
 type: walkthrough # or article
 category: networking # see categories below
 tags: [example, tag]
-summary: One or two sentences for cards and SEO.
+summary: Fallback card copy; catalogue hook overlays this when the slug matches.
 walkthrough_url: https://jajera.github.io/your-walkthrough/
 demo_url: https://github.com/jajera/your-demo
 # article_url: https://dev.to/jajera/your-article
@@ -65,7 +65,7 @@ Short intro in Markdown. Link out via the CTA buttons from front matter URLs.
 | `date`     | ISO date (`YYYY-MM-DD`)    |
 | `type`     | `walkthrough` or `article` |
 | `category` | One of the enums below     |
-| `summary`  | Card / meta description    |
+| `summary`  | Fallback card / meta copy (catalogue `hook` wins when present) |
 
 ### Optional fields
 
@@ -97,8 +97,9 @@ Published entries should usually include at least one of `walkthrough_url`, `art
 
 - Search matches title, summary, type, category, and tags (`Ctrl/Cmd+K` focuses the box)
 - Filters and search reset pagination to page 1
-- Page size is 12; URL keeps `?q=` and `?page=`
-- Theme toggle uses `localStorage` key `starlight-theme` (same as jajera Starlight walkthroughs)
+- Page size is 10; URL keeps `?q=` and `?page=`
+- Theme toggle cycles auto → light → dark (`localStorage` key `theme`, same as johna.kiwi)
+- Card hooks: build fetches `CATALOGUE_URL` when set, else `data/catalogue.json`; matching `hook` overlays `summary`
 
 ## GitHub Pages
 
@@ -107,7 +108,7 @@ Published entries should usually include at least one of `walkthrough_url`, `art
 3. Push to `main` (or run **Deploy to GitHub Pages** manually).
 4. Site: https://guides.johna.kiwi/
 
-The workflow builds with `npm ci` and deploys `dist/`. `public/.nojekyll` is copied into the output so Jekyll does not process the site.
+The workflow builds with `npm ci`, sets `CATALOGUE_URL` to the public S3 catalogue, and deploys `dist/`. `public/.nojekyll` is copied into the output so Jekyll does not process the site.
 
 ## Troubleshooting
 
@@ -128,14 +129,15 @@ The workflow builds with `npm ci` and deploys `dist/`. `public/.nojekyll` is cop
 - CMS sync
 - Pagefind / server search
 - Dedicated `/types/*` pages
-- S3 / CloudFront hosting
+- Lambda `repository_dispatch` rebuild when catalogue refreshes (rebuild on guides push only for now)
 
 ## Smoke checklist
 
 - [ ] `npm run build` exits 0
 - [ ] Home lists published entries only (no drafts)
 - [ ] Search, type/category filters, and pagination work together
-- [ ] Theme toggle switches light/dark and persists
+- [ ] Theme toggle cycles auto / light / dark
+- [ ] Card summaries match catalogue hooks when `CATALOGUE_URL` is set (or snapshot)
 - [ ] One category page renders
 - [ ] Entry CTAs open walkthrough / article / demo URLs
 - [ ] `/rss.xml` and sitemap exist in `dist/`

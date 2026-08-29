@@ -1,11 +1,11 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import EntryMeta from '../components/EntryMeta.astro';
 import CtaLinks from '../components/CtaLinks.astro';
+import { getPublishedGuides, type GuideEntry } from '../lib/guides';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('guides', ({ data }) => !data.draft);
+  const entries = await getPublishedGuides();
   return entries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -13,12 +13,24 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  entry: CollectionEntry<'guides'>;
+  entry: GuideEntry;
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, summary, type, category, date, tags, walkthrough_url, article_url, demo_url, video_url, social_url } = entry.data;
+const {
+  title,
+  summary,
+  type,
+  category,
+  date,
+  tags,
+  walkthrough_url,
+  article_url,
+  demo_url,
+  video_url,
+  social_url,
+} = entry.data;
 ---
 
 <BaseLayout title={title} description={summary}>

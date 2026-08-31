@@ -5,7 +5,7 @@ type: walkthrough
 category: containers
 tags: [eks, kueue, batch, argo-cd, auto-mode, gitops]
 summary: Deploy Kueue on Amazon EKS Auto Mode with eksctl and GitOps — cap concurrent batch jobs and share quota across projects.
-walkthrough_url: https://jajera.github.io/kueue-eks-walkthrough/
+walkthrough_url: https://kueue-eks-walkthrough.johna.kiwi/
 draft: false
 ---
 

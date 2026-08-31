@@ -5,7 +5,7 @@ type: walkthrough
 category: containers
 tags: [ecs, express-mode, alb, terraform, fargate]
 summary: Deploy HTTP/HTTPS containers on ECS with a single Terraform resource — managed ALB, auto scaling, and HTTPS URL included.
-walkthrough_url: https://jajera.github.io/ecs-express-mode-walkthrough/
+walkthrough_url: https://ecs-express-mode-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/ecs-express-mode-walkthrough
 draft: false
 ---

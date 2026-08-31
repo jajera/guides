@@ -5,7 +5,7 @@ type: walkthrough
 category: serverless
 tags: [lambda, managed-instances, capacity-provider, iam]
 summary: Theory-first guide to Lambda Managed Instances — fundamentals, quotas, and hands-on walkthrough pages as they publish.
-walkthrough_url: https://jajera.github.io/aws-lambda-managed-instance-walkthrough/
+walkthrough_url: https://aws-lambda-managed-instance-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/aws-lambda-managed-instance-walkthrough
 draft: false
 ---

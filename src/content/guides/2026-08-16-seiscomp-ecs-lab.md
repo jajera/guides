@@ -5,7 +5,7 @@ type: walkthrough
 category: containers
 tags: [seiscomp, ecs, fargate, rds, efs, seismology, gsm]
 summary: Unofficial SeisComP lab on ECS Fargate with RDS EFS and EC2 GUI.
-walkthrough_url: https://jajera.github.io/seiscomp-ecs-lab/
+walkthrough_url: https://seiscomp-ecs-lab.johna.kiwi/
 demo_url: https://github.com/jajera/seiscomp-ecs-lab
 draft: false
 ---

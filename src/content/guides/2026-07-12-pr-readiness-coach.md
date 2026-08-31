@@ -5,7 +5,7 @@ type: walkthrough
 category: tooling
 tags: [github-actions, bedrock, cdk, amplify, ci, productivity]
 summary: AI coach that checks branch readiness before you open a pull request — local CLI, AWS API, GitHub Actions comments, Kiro hooks, and an owner UI.
-walkthrough_url: https://jajera.github.io/pr-readiness-coach-walkthrough/
+walkthrough_url: https://pr-readiness-coach-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/pr-readiness-coach
 article_url: https://builder.aws.com/content/3GP54hvnhrtL72pbGh3P7WQXBYN/weekend-productivity-challenge-pr-readiness-coach
 draft: false

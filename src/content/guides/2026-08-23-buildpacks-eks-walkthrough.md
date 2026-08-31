@@ -5,7 +5,7 @@ type: walkthrough
 category: containers
 tags: [eks, buildpacks, kpack, ecr, argo-cd, codecommit, gitops]
 summary: Prove buildpacks on EKS — platform-owned image builds, app teams push code only.
-walkthrough_url: https://jajera.github.io/buildpacks-eks-walkthrough/
+walkthrough_url: https://buildpacks-eks-walkthrough.johna.kiwi/
 draft: false
 ---
 

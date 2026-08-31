@@ -5,7 +5,7 @@ type: walkthrough
 category: storage
 tags: [s3-vectors, bedrock, rag, lambda, amplify, terraform]
 summary: Vector search without a vector database — Amazon S3 Vectors, Bedrock embeddings, and a serverless RAG app.
-walkthrough_url: https://jajera.github.io/s3-vectors-rag-workload/
+walkthrough_url: https://s3-vectors-rag-workload.johna.kiwi/
 demo_url: https://github.com/jajera/s3-vectors-rag-workload
 draft: false
 ---

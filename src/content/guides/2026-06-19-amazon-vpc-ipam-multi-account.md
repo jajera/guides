@@ -5,7 +5,7 @@ type: walkthrough
 category: networking
 tags: [ipam, ram, multi-account, terraform, vpc]
 summary: Org-wide VPC IPAM across four accounts and two regions — delegated admin, RAM pool sharing, and pool-backed workload VPCs.
-walkthrough_url: https://jajera.github.io/amazon-vpc-ipam-multi-account-walkthrough/
+walkthrough_url: https://amazon-vpc-ipam-multi-account-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/amazon-vpc-ipam-multi-account-walkthrough
 draft: false
 ---

@@ -5,7 +5,7 @@ type: walkthrough
 category: networking
 tags: [privatelink, vpc-lattice, peering, transit-gateway, cloud-wan, multi-account]
 summary: Deploy and compare five private cross-account patterns — VPC Peering, PrivateLink, VPC Lattice, Transit Gateway, and Cloud WAN.
-walkthrough_url: https://jajera.github.io/aws-private-connectivity-patterns-walkthrough/
+walkthrough_url: https://aws-private-connectivity-patterns-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/aws-private-connectivity-patterns-walkthrough
 draft: false
 ---

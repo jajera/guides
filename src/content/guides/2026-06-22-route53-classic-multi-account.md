@@ -5,7 +5,7 @@ type: walkthrough
 category: dns
 tags: [route53, multi-account, private-dns, terraform]
 summary: Share one private hosted zone across three accounts and two regions — classic VPC association authorization, no Profiles or RAM.
-walkthrough_url: https://jajera.github.io/route53-classic-multi-account-walkthrough/
+walkthrough_url: https://route53-classic-multi-account-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/route53-classic-multi-account-walkthrough
 draft: false
 ---

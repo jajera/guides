@@ -5,7 +5,7 @@ type: walkthrough
 category: networking
 tags: [privatelink, vpc, nlb, cross-region, terraform, multi-account]
 summary: Cross-account PrivateLink into a private 3-tier API — same-Region Sydney, cross-Region Melbourne, and why New Zealand cannot join the cross-Region path today.
-walkthrough_url: https://jajera.github.io/privatelink-conduit/
+walkthrough_url: https://privatelink-conduit.johna.kiwi/
 demo_url: https://github.com/jajera/privatelink-conduit
 draft: false
 ---

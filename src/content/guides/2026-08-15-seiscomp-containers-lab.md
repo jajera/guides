@@ -5,7 +5,7 @@ type: walkthrough
 category: containers
 tags: [seiscomp, docker, compose, seismology, ec2, gsm]
 summary: Unofficial LEARN SeisComP lab as one Docker Compose service per process using gsm.
-walkthrough_url: https://jajera.github.io/seiscomp-containers-lab/
+walkthrough_url: https://seiscomp-containers-lab.johna.kiwi/
 demo_url: https://github.com/jajera/seiscomp-containers-lab
 draft: false
 ---

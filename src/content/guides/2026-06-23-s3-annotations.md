@@ -5,7 +5,7 @@ type: walkthrough
 category: storage
 tags: [s3-annotations, geonet, lambda, amplify, terraform]
 summary: Attach structured JSON metadata to S3 objects — demonstrated on GeoNet volcano camera imagery from Te Kaha.
-walkthrough_url: https://jajera.github.io/s3-annotations-walkthrough/
+walkthrough_url: https://s3-annotations-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/terraform-aws-s3-annotations-demo
 draft: false
 ---

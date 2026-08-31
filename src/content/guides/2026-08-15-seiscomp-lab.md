@@ -5,7 +5,7 @@ type: walkthrough
 category: general
 tags: [seiscomp, seismology, ec2, ubuntu, gsm, geofon]
 summary: Single host SeisComP learning lab on AWS Ubuntu.
-walkthrough_url: https://jajera.github.io/seiscomp-lab/
+walkthrough_url: https://seiscomp-lab.johna.kiwi/
 demo_url: https://github.com/jajera/seiscomp-lab
 draft: false
 ---

@@ -5,7 +5,7 @@ type: walkthrough
 category: serverless
 tags: [eventbridge, lambda, sqs, amplify, terraform, gnss]
 summary: Deploy an AWS event-driven platform for GNSS RINEX ingest, TEC calibration, and visualization.
-walkthrough_url: https://jajera.github.io/aws-event-driven-serverless-walkthrough/
+walkthrough_url: https://aws-event-driven-serverless-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/aws-event-driven-serverless-walkthrough
 draft: false
 ---

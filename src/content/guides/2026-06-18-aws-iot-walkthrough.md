@@ -5,7 +5,7 @@ type: walkthrough
 category: iot
 tags: [iot-core, esp32, mqtt, terraform, amplify, lambda]
 summary: Connect ESP32-S3 to AWS IoT Core — pretest flash and serial, then Terraform for rules, Lambda, DynamoDB, API, and Amplify dashboard.
-walkthrough_url: https://jajera.github.io/aws-iot-walkthrough/
+walkthrough_url: https://aws-iot-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/aws-iot-walkthrough
 draft: false
 ---

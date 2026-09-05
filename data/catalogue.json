@@ -483,41 +483,9 @@
       "repo": "https://github.com/jajera/amplify-astro-cicd"
     },
     {
-      "slug": "2026-09-03-private-s3-artifact-store",
-      "title": "Private S3 artifact store",
-      "date": "2026-09-03",
-      "type": "walkthrough",
-      "category": "storage",
-      "tags": [
-        "s3",
-        "vpc-endpoints",
-        "multi-account",
-        "replication"
-      ],
-      "url": "https://private-s3-artifact-store.johna.kiwi/",
-      "hook": "Keep S3 objects private behind regional gateway endpoints, publish in Sydney, and replicate to Auckland."
-    },
-    {
-      "slug": "2026-09-04-private-s3-pkg-repo",
-      "title": "Private S3 package repo",
-      "date": "2026-09-04",
-      "type": "walkthrough",
-      "category": "storage",
-      "tags": [
-        "s3",
-        "rpm",
-        "deb",
-        "vpc-endpoints",
-        "multi-region",
-        "ecr"
-      ],
-      "url": "https://private-s3-pkg-repo.johna.kiwi/",
-      "hook": "Private multi-region RPM and deb repos on S3 via regional gateway VPC endpoints."
-    },
-    {
-      "slug": "2026-09-05-kinesis-s3-delivery-walkthrough",
+      "slug": "2026-09-02-kinesis-s3-delivery-walkthrough",
       "title": "Kinesis S3 delivery",
-      "date": "2026-09-05",
+      "date": "2026-09-02",
       "type": "walkthrough",
       "category": "storage",
       "tags": [
@@ -528,7 +496,38 @@
         "cloudwatch"
       ],
       "url": "https://kinesis-s3-delivery-walkthrough.johna.kiwi/",
-      "hook": "Deliver Kinesis Data Streams records straight to a general purpose S3 bucket — no Firehose or Lambda consumer."
+      "hook": "Send Kinesis Data Streams records straight to S3 without Firehose or a Lambda consumer."
+    },
+    {
+      "slug": "2026-09-04-private-s3-artifact-store",
+      "title": "Private S3 artifact store",
+      "date": "2026-09-04",
+      "type": "walkthrough",
+      "category": "storage",
+      "tags": [
+        "s3",
+        "vpc-endpoints",
+        "multi-account",
+        "replication"
+      ],
+      "url": "https://private-s3-artifact-store.johna.kiwi/",
+      "hook": "Keep S3 objects private and reachable only through regional VPC gateway endpoints, with copy from Sydney to Auckland."
+    },
+    {
+      "slug": "2026-09-05-private-s3-pkg-repo",
+      "title": "Private S3 package repo",
+      "date": "2026-09-05",
+      "type": "walkthrough",
+      "category": "storage",
+      "tags": [
+        "s3",
+        "rpm",
+        "deb",
+        "vpc-endpoints",
+        "multi-region"
+      ],
+      "url": "https://private-s3-pkg-repo.johna.kiwi/",
+      "hook": "Host private RPM and deb repositories on S3 and install from them through regional VPC gateway endpoints."
     }
   ]
 }

@@ -546,6 +546,23 @@
       "url": "https://pl-vs-inspected-tgw.johna.kiwi/",
       "hook": "Same live stream across accounts — PrivateLink one way, Transit Gateway through your inspection hub the other. Stand it up, measure both, keep the path that fits.",
       "repo": "https://github.com/jajera/pl-vs-inspected-tgw"
+    },
+    {
+      "slug": "2026-09-13-tgw-policy-based-routing",
+      "title": "TGW Policy-Based Routing",
+      "date": "2026-09-13",
+      "type": "walkthrough",
+      "category": "networking",
+      "tags": [
+        "transit-gateway",
+        "policy-based-routing",
+        "multi-account",
+        "inspection",
+        "networking"
+      ],
+      "url": "https://tgw-policy-based-routing-walkthrough.johna.kiwi/",
+      "hook": "Same Spoke B IP, two paths — PBR steers TCP/443 via the hub and leaves TCP/80 direct. Run the three-account lab and prove destination-only versus policy-based routing.",
+      "repo": "https://github.com/jajera/tgw-policy-based-routing"
     }
   ]
 }

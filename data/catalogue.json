@@ -528,6 +528,24 @@
       ],
       "url": "https://private-s3-pkg-repo.johna.kiwi/",
       "hook": "Host private RPM and deb repositories on S3 and install from them through regional VPC gateway endpoints."
+    },
+    {
+      "slug": "2026-09-12-pl-vs-inspected-tgw",
+      "title": "PrivateLink vs inspected TGW",
+      "date": "2026-09-12",
+      "type": "walkthrough",
+      "category": "networking",
+      "tags": [
+        "privatelink",
+        "transit-gateway",
+        "network-firewall",
+        "multi-account",
+        "latency",
+        "cost"
+      ],
+      "url": "https://pl-vs-inspected-tgw.johna.kiwi/",
+      "hook": "Same live stream across accounts — PrivateLink one way, Transit Gateway through your inspection hub the other. Stand it up, measure both, keep the path that fits.",
+      "repo": "https://github.com/jajera/pl-vs-inspected-tgw"
     }
   ]
 }

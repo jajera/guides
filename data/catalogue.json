@@ -544,7 +544,7 @@
         "cost"
       ],
       "url": "https://pl-vs-inspected-tgw.johna.kiwi/",
-      "hook": "Same live stream across accounts — PrivateLink one way, Transit Gateway through your inspection hub the other. Stand it up, measure both, keep the path that fits.",
+      "hook": "One live stream, two paths — clock PrivateLink against a TGW inspection hairpin, then keep the path that wins on latency and cost.",
       "repo": "https://github.com/jajera/pl-vs-inspected-tgw"
     },
     {
@@ -561,7 +561,7 @@
         "networking"
       ],
       "url": "https://tgw-policy-based-routing-walkthrough.johna.kiwi/",
-      "hook": "Same Spoke B IP, two paths — PBR steers TCP/443 via the hub and leaves TCP/80 direct. Run the three-account lab and prove destination-only versus policy-based routing.",
+      "hook": "Same private IP, two paths — prove Transit Gateway Policy-Based Routing sends HTTPS via the hub while HTTP goes direct.",
       "repo": "https://github.com/jajera/tgw-policy-based-routing"
     },
     {
@@ -578,7 +578,7 @@
         "inspection"
       ],
       "url": "https://aws-nfw-walkthrough.johna.kiwi/",
-      "hook": "Dual-hub Transit Gateway and Network Firewall across Sydney and Auckland — build the mesh first, then attach NFW so cross-Region traffic is double-inspected on both hubs.",
+      "hook": "Stand up disposable TGW hubs in Sydney and Auckland, then prove Network Firewall really double-inspects cross-Region traffic.",
       "repo": "https://github.com/jajera/aws-nfw-lab"
     }
   ]

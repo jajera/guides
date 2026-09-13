@@ -1,7 +1,3 @@
-
-> guides@1.0.0 export:registry
-> node scripts/export-registry.mjs
-
 {
   "items": [
     {

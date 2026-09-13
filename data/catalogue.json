@@ -563,6 +563,23 @@
       "url": "https://tgw-policy-based-routing-walkthrough.johna.kiwi/",
       "hook": "Same Spoke B IP, two paths — PBR steers TCP/443 via the hub and leaves TCP/80 direct. Run the three-account lab and prove destination-only versus policy-based routing.",
       "repo": "https://github.com/jajera/tgw-policy-based-routing"
+    },
+    {
+      "slug": "2026-09-14-aws-nfw-walkthrough",
+      "title": "AWS NFW Walkthrough",
+      "date": "2026-09-14",
+      "type": "walkthrough",
+      "category": "networking",
+      "tags": [
+        "network-firewall",
+        "transit-gateway",
+        "multi-account",
+        "cross-region",
+        "inspection"
+      ],
+      "url": "https://aws-nfw-walkthrough.johna.kiwi/",
+      "hook": "Dual-hub Transit Gateway and Network Firewall across Sydney and Auckland — build the mesh first, then attach NFW so cross-Region traffic is double-inspected on both hubs.",
+      "repo": "https://github.com/jajera/aws-nfw-lab"
     }
   ]
 }

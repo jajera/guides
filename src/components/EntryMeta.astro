@@ -6,17 +6,29 @@ interface Props {
   tags?: string[];
   showTags?: boolean;
   linkCategory?: boolean;
+  recognition?: { label: string; url?: string };
+  linkRecognition?: boolean;
 }
 
 import { withBase } from '../lib/paths';
 
-const { type, category, date, tags = [], showTags = false, linkCategory = true } = Astro.props;
+const {
+  type,
+  category,
+  date,
+  tags = [],
+  showTags = false,
+  linkCategory = true,
+  recognition,
+  linkRecognition = false,
+} = Astro.props;
 const formatted = date.toLocaleDateString('en-CA', {
   year: 'numeric',
   month: 'short',
   day: 'numeric',
 });
 const categoryHref = withBase(`categories/${category}/`);
+const recognitionHref = linkRecognition ? recognition?.url : undefined;
 ---
 
 <div class="entry-meta">
@@ -25,6 +37,20 @@ const categoryHref = withBase(`categories/${category}/`);
     <a class="badge badge--category" href={categoryHref}>{category}</a>
   ) : (
     <span class="badge badge--category">{category}</span>
+  )}
+  {recognition && (
+    recognitionHref ? (
+      <a
+        class="badge badge--recognition"
+        href={recognitionHref}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {recognition.label}
+      </a>
+    ) : (
+      <span class="badge badge--recognition">{recognition.label}</span>
+    )
   )}
   <time datetime={date.toISOString()}>{formatted}</time>
 </div>

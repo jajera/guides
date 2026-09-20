@@ -6,6 +6,9 @@ category: containers
 tags: [eks, buildpacks, kpack, ecr, argo-cd, codecommit, gitops]
 summary: Prove buildpacks on EKS — platform-owned image builds, app teams push code only.
 walkthrough_url: https://buildpacks-eks-walkthrough.johna.kiwi/
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3JPnrw9A6ObSeL3N19Gf8AqcojO/aws-community-builders-spotlight-september-7th-edition
 draft: false
 ---
 

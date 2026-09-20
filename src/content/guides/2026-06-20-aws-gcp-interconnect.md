@@ -7,6 +7,9 @@ tags: [interconnect, gcp, hybrid, terraform, private-connectivity]
 summary: Private connectivity between AWS and GCP — no VPN, no colocation, no public internet.
 walkthrough_url: https://aws-gcp-interconnect-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/aws-gcp-interconnect-walkthrough
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3FEFCEG4w5Ker7oyNwzddktNTPi/aws-community-builders-spotlight-june-8th-edition
 draft: false
 ---
 

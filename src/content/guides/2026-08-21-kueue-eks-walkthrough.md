@@ -6,6 +6,9 @@ category: containers
 tags: [eks, kueue, batch, argo-cd, auto-mode, gitops]
 summary: Deploy Kueue on Amazon EKS Auto Mode with eksctl and GitOps — cap concurrent batch jobs and share quota across projects.
 walkthrough_url: https://kueue-eks-walkthrough.johna.kiwi/
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3J6MBf4uU7J6JYGg0o2Ck8YLhwl/aws-community-builders-spotlight-august-31st-edition
 draft: false
 ---
 

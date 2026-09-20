@@ -8,14 +8,36 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { title, summary, type, category, date } = entry.data;
+const { title, summary, type, category, date, recognition } = entry.data;
 const href = withBase(`${entry.slug}/`);
-const searchText = [title, summary, type, category, ...(entry.data.tags ?? [])].join(' ').toLowerCase();
+const searchText = [
+  title,
+  summary,
+  type,
+  category,
+  recognition?.label,
+  ...(entry.data.tags ?? []),
+]
+  .filter(Boolean)
+  .join(' ')
+  .toLowerCase();
 ---
 
-<li data-type={type} data-category={category} data-search={searchText}>
+<li
+  data-type={type}
+  data-category={category}
+  data-recognized={recognition ? 'true' : 'false'}
+  data-search={searchText}
+>
   <a class="entry-card" href={href}>
-    <EntryMeta type={type} category={category} date={date} linkCategory={false} />
+    <EntryMeta
+      type={type}
+      category={category}
+      date={date}
+      recognition={recognition}
+      linkCategory={false}
+      linkRecognition={false}
+    />
     <h2 class="entry-card__title">{title}</h2>
     <p class="entry-card__summary">{summary}</p>
   </a>

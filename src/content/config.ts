@@ -25,6 +25,12 @@ const guides = defineCollection({
     article_url: z.string().url().optional(),
     video_url: z.string().url().optional(),
     social_url: z.string().url().optional(),
+    recognition: z
+      .object({
+        label: z.string(),
+        url: z.string().url().optional(),
+      })
+      .optional(),
     draft: z.boolean().default(false),
   }),
 });

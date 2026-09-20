@@ -7,6 +7,9 @@ tags: [ec2, autoscaling, monitoring, health-checks]
 summary: Amazon EC2 application status checks walkthrough for in network HTTP probes and optional Auto Scaling replacement.
 walkthrough_url: https://ec2-application-status-checks-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/ec2-application-status-checks-walkthrough
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3IhHT01nFAzOAoIzrhjScCMkrL3/aws-community-builders-spotlight-august-24th-edition
 draft: false
 ---
 

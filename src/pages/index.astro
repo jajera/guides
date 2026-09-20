@@ -8,6 +8,7 @@ const entries = await getPublishedGuides();
 const usedCategories = GUIDE_CATEGORIES.filter((category) =>
   entries.some((entry) => entry.data.category === category),
 );
+const hasRecognized = entries.some((entry) => entry.data.recognition);
 const pageSize = 10;
 ---
 
@@ -37,6 +38,15 @@ const pageSize = 10;
             ))}
           </select>
         </label>
+        {hasRecognized && (
+          <label class="feed-filter">
+            Recognition
+            <select id="filter-recognition" name="recognition">
+              <option value="ALL">All guides</option>
+              <option value="recognized">Recognized</option>
+            </select>
+          </label>
+        )}
       </div>
     )}
   </div>
@@ -68,6 +78,7 @@ const pageSize = 10;
         (function () {
           const typeSelect = document.getElementById('filter-type');
           const categorySelect = document.getElementById('filter-category');
+          const recognitionSelect = document.getElementById('filter-recognition');
           const searchInput = document.getElementById('site-search-input');
           const status = document.getElementById('filter-status');
           const list = document.getElementById('entry-list');
@@ -130,14 +141,18 @@ const pageSize = 10;
           function applyFilters({ resetPage = false } = {}) {
             const type = typeSelect.value;
             const category = categorySelect.value;
+            const recognition = recognitionSelect ? recognitionSelect.value : 'ALL';
             const query = searchInput.value.trim().toLowerCase();
 
             matched = cards.filter((card) => {
               const matchType = type === 'ALL' || card.dataset.type === type;
               const matchCategory = category === 'ALL' || card.dataset.category === category;
+              const matchRecognition =
+                recognition === 'ALL' ||
+                (recognition === 'recognized' && card.dataset.recognized === 'true');
               const haystack = (card.getAttribute('data-search') || '').toLowerCase();
               const matchSearch = !query || haystack.includes(query);
-              return matchType && matchCategory && matchSearch;
+              return matchType && matchCategory && matchRecognition && matchSearch;
             });
 
             if (resetPage) currentPage = 1;
@@ -147,6 +162,9 @@ const pageSize = 10;
 
           typeSelect.addEventListener('change', () => applyFilters({ resetPage: true }));
           categorySelect.addEventListener('change', () => applyFilters({ resetPage: true }));
+          if (recognitionSelect) {
+            recognitionSelect.addEventListener('change', () => applyFilters({ resetPage: true }));
+          }
           searchInput.addEventListener('input', () => applyFilters({ resetPage: true }));
           searchInput.addEventListener('search', () => applyFilters({ resetPage: true }));
           prevBtn.addEventListener('click', () => {

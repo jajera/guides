@@ -614,6 +614,16 @@
     border-color: var(--accent);
   }
 
+  .badge--recognition {
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-color: color-mix(in oklab, var(--accent) 28%, var(--line));
+  }
+
+  a.badge--recognition:hover {
+    border-color: var(--accent);
+  }
+
   .tag-list {
     display: flex;
     flex-wrap: wrap;

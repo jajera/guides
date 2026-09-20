@@ -7,6 +7,9 @@ tags: [kiro, wsl2, docker, aws-sso, windows, mcp]
 summary: Take a Windows laptop from BIOS virtualization through WSL2, Docker Desktop, and Kiro IDE, then land GitHub SSH and IAM Identity Center so you can work in Ubuntu with AWS SSO and MCP ready.
 walkthrough_url: https://kiro-wsl-aws-setup-guide.johna.kiwi/
 demo_url: https://github.com/jajera/kiro-wsl-aws-setup-guide
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3FiioHzgyQzy38zQSR9ftczfm6x/aws-community-builders-spotlight-rewind-edition
 draft: false
 ---
 

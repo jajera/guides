@@ -71,7 +71,9 @@ Short intro in Markdown. Link out via the CTA buttons from front matter URLs.
 
 ### Optional fields
 
-`tags`, `walkthrough_url`, `demo_url`, `article_url`, `video_url`, `social_url`, `draft` (default `false`)
+`tags`, `walkthrough_url`, `demo_url`, `article_url`, `video_url`, `social_url`, `recognition` (`label` + optional `url`), `draft` (default `false`)
+
+Use `recognition` when a guide was featured (e.g. Community Builders Spotlight). The home page Recognition filter shows those entries; the badge links to `url` on the detail page.
 
 Published entries should usually include at least one of `walkthrough_url`, `article_url`, or `video_url`.
 

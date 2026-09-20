@@ -7,6 +7,9 @@ tags: [s3-files, efs, ec2, lambda, ecs, terraform]
 summary: Mount an S3 bucket as an NFS file system on EC2, ECS Fargate, and Lambda — CLI and Terraform paths.
 walkthrough_url: https://s3-files-workloads.johna.kiwi/
 demo_url: https://github.com/jajera/s3-files-workloads
+recognition:
+  label: "4×4 Highlights"
+  url: https://builder.aws.com/content/3DMnx8lwoUma9MicfdNnuSCOgXc/the-4x4-networking-and-content-delivery-community-highlights
 draft: false
 ---
 

@@ -600,6 +600,24 @@
       "repo": "https://github.com/jajera/aws-ntripcaster-ha-patterns"
     },
     {
+      "slug": "2026-09-20-kiro-wsl-aws-setup-guide",
+      "title": "Kiro on WSL with AWS SSO",
+      "date": "2026-09-20",
+      "type": "walkthrough",
+      "category": "tooling",
+      "tags": [
+        "kiro",
+        "wsl2",
+        "docker",
+        "aws-sso",
+        "windows",
+        "mcp"
+      ],
+      "url": "https://kiro-wsl-aws-setup-guide.johna.kiwi/",
+      "hook": "Take a Windows laptop from BIOS virtualization through WSL2, Docker Desktop, and Kiro IDE, then land GitHub SSH and IAM Identity Center so you can work in Ubuntu with AWS SSO and MCP ready.",
+      "repo": "https://github.com/jajera/kiro-wsl-aws-setup-guide"
+    },
+    {
       "slug": "2026-09-20-s3-express-hot-lookup-walkthrough",
       "title": "S3 Express hot lookup",
       "date": "2026-09-20",

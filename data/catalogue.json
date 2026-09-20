@@ -598,6 +598,24 @@
       "url": "https://aws-ntripcaster-ha-patterns.johna.kiwi/",
       "hook": "BKG’s caster fans GNSS streams but won’t fail over. Prove a normal relay-IPort first, then bolt on dual-AZ L4 and multi-region DNS — one stack at a time.",
       "repo": "https://github.com/jajera/aws-ntripcaster-ha-patterns"
+    },
+    {
+      "slug": "2026-09-20-s3-express-hot-lookup-walkthrough",
+      "title": "S3 Express hot lookup",
+      "date": "2026-09-20",
+      "type": "walkthrough",
+      "category": "storage",
+      "tags": [
+        "s3",
+        "s3-express",
+        "directory-bucket",
+        "latency",
+        "ec2",
+        "ecr"
+      ],
+      "url": "https://s3-express-hot-lookup-walkthrough.johna.kiwi/",
+      "hook": "Put hot keys in an Express directory bucket next to compute, bake them off against Standard in the same AZ, and read the live ratio on a small harness dash.",
+      "repo": "https://github.com/jajera/s3-express-hot-lookup-walkthrough"
     }
   ]
 }

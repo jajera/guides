@@ -1,6 +1,6 @@
 ---
 title: Kiro on WSL with AWS SSO
-date: 2026-09-20
+date: 2026-06-30
 type: walkthrough
 category: tooling
 tags: [kiro, wsl2, docker, aws-sso, windows, mcp]

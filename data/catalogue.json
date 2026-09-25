@@ -634,6 +634,25 @@
       "url": "https://s3-express-hot-lookup-walkthrough.johna.kiwi/",
       "hook": "Put hot keys in an Express directory bucket next to compute, bake them off against Standard in the same AZ, and read the live ratio on a small harness dash.",
       "repo": "https://github.com/jajera/s3-express-hot-lookup-walkthrough"
+    },
+    {
+      "slug": "2026-09-26-aws-route53-central-outbound",
+      "title": "Central Route 53 outbound DNS",
+      "date": "2026-09-26",
+      "type": "walkthrough",
+      "category": "dns",
+      "tags": [
+        "route53",
+        "resolver",
+        "outbound",
+        "ram",
+        "multi-account",
+        "terraform",
+        "cost"
+      ],
+      "url": "https://aws-route53-central-outbound.johna.kiwi/",
+      "hook": "When several VPCs need the same corporate zone, decide between per-account outbound endpoints and one hub shared with RAM — and when a local escape hatch is worth the extra ENIs.",
+      "repo": "https://github.com/jajera/aws-route53-central-outbound"
     }
   ]
 }

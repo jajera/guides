@@ -653,6 +653,25 @@
       "url": "https://aws-route53-central-outbound.johna.kiwi/",
       "hook": "When several VPCs need the same corporate zone, decide between per-account outbound endpoints and one hub shared with RAM — and when a local escape hatch is worth the extra ENIs.",
       "repo": "https://github.com/jajera/aws-route53-central-outbound"
+    },
+    {
+      "slug": "2026-09-26-aws-eventbridge-enhanced-bus",
+      "title": "Enhanced EventBridge custom event bus",
+      "date": "2026-09-26",
+      "type": "walkthrough",
+      "category": "serverless",
+      "tags": [
+        "eventbridge",
+        "eventsv2",
+        "ram",
+        "multi-account",
+        "cli",
+        "fifo",
+        "subscriber"
+      ],
+      "url": "https://aws-eventbridge-enhanced-bus.johna.kiwi/",
+      "hook": "One enhanced bus shared with RAM, a FIFO Subscriber that owns its filter, and ordered health alerts in another account — without bus-to-bus hops.",
+      "repo": "https://github.com/jajera/aws-eventbridge-enhanced-bus"
     }
   ]
 }

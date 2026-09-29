@@ -672,6 +672,24 @@
       "url": "https://aws-eventbridge-enhanced-bus.johna.kiwi/",
       "hook": "One enhanced bus shared with RAM, a FIFO Subscriber that owns its filter, and ordered health alerts in another account — without bus-to-bus hops.",
       "repo": "https://github.com/jajera/aws-eventbridge-enhanced-bus"
+    },
+    {
+      "slug": "2026-09-30-meshtastic-heltec-v4-walkthrough",
+      "title": "Heltec V4 Meshtastic first setup",
+      "date": "2026-09-30",
+      "type": "walkthrough",
+      "category": "iot",
+      "tags": [
+        "meshtastic",
+        "heltec",
+        "lora",
+        "esp32s3",
+        "flasher",
+        "ble"
+      ],
+      "url": "https://meshtastic-heltec-v4-walkthrough.johna.kiwi/",
+      "hook": "Flash a Heltec WiFi LoRa 32 V4 with Meshtastic from a clean desk — bootloader, web flasher, region, then prove the node is alive.",
+      "repo": "https://github.com/jajera/meshtastic-heltec-v4-walkthrough"
     }
   ]
 }

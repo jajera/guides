@@ -636,25 +636,6 @@
       "repo": "https://github.com/jajera/s3-express-hot-lookup-walkthrough"
     },
     {
-      "slug": "2026-09-26-aws-route53-central-outbound",
-      "title": "Central Route 53 outbound DNS",
-      "date": "2026-09-26",
-      "type": "walkthrough",
-      "category": "dns",
-      "tags": [
-        "route53",
-        "resolver",
-        "outbound",
-        "ram",
-        "multi-account",
-        "terraform",
-        "cost"
-      ],
-      "url": "https://aws-route53-central-outbound.johna.kiwi/",
-      "hook": "When several VPCs need the same corporate zone, decide between per-account outbound endpoints and one hub shared with RAM — and when a local escape hatch is worth the extra ENIs.",
-      "repo": "https://github.com/jajera/aws-route53-central-outbound"
-    },
-    {
       "slug": "2026-09-26-aws-eventbridge-enhanced-bus",
       "title": "Enhanced EventBridge custom event bus",
       "date": "2026-09-26",
@@ -674,6 +655,25 @@
       "repo": "https://github.com/jajera/aws-eventbridge-enhanced-bus"
     },
     {
+      "slug": "2026-09-26-aws-route53-central-outbound",
+      "title": "Central Route 53 outbound DNS",
+      "date": "2026-09-26",
+      "type": "walkthrough",
+      "category": "dns",
+      "tags": [
+        "route53",
+        "resolver",
+        "outbound",
+        "ram",
+        "multi-account",
+        "terraform",
+        "cost"
+      ],
+      "url": "https://aws-route53-central-outbound.johna.kiwi/",
+      "hook": "When several VPCs need the same corporate zone, decide between per-account outbound endpoints and one hub shared with RAM — and when a local escape hatch is worth the extra ENIs.",
+      "repo": "https://github.com/jajera/aws-route53-central-outbound"
+    },
+    {
       "slug": "2026-09-30-meshtastic-heltec-v4-walkthrough",
       "title": "Heltec V4 Meshtastic first setup",
       "date": "2026-09-30",
@@ -690,6 +690,24 @@
       "url": "https://meshtastic-heltec-v4-walkthrough.johna.kiwi/",
       "hook": "Flash a Heltec WiFi LoRa 32 V4 with Meshtastic from a clean desk — bootloader, web flasher, region, then prove the node is alive.",
       "repo": "https://github.com/jajera/meshtastic-heltec-v4-walkthrough"
+    },
+    {
+      "slug": "2026-10-01-meshcore-heltec-v4-walkthrough",
+      "title": "Heltec V4 MeshCore first setup",
+      "date": "2026-10-01",
+      "type": "walkthrough",
+      "category": "iot",
+      "tags": [
+        "meshcore",
+        "heltec",
+        "lora",
+        "esp32s3",
+        "flasher",
+        "ble"
+      ],
+      "url": "https://meshcore-heltec-v4-walkthrough.johna.kiwi/",
+      "hook": "Flash a Heltec WiFi LoRa 32 V4 with MeshCore Companion Bluetooth — bootloader, web flasher, radio preset, then pair the app.",
+      "repo": "https://github.com/jajera/meshcore-heltec-v4-walkthrough"
     }
   ]
 }

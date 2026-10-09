@@ -13,7 +13,7 @@
         "paths"
       ],
       "url": "https://dev.to/jajera/understanding-github-actions-working-directory-550o",
-      "hook": "Where GitHub Actions stores files during a run — default workspace, working-directory scopes, action paths, and path-related environment variables."
+      "hook": "Where GitHub Actions stores files during a run \u2014 default workspace, working-directory scopes, action paths, and path-related environment variables."
     },
     {
       "slug": "2025-05-05-amazon-q-cli-slides",
@@ -28,7 +28,7 @@
         "slides"
       ],
       "url": "https://jajera.github.io/amazon-q-cli-slides/",
-      "hook": "Slide deck on Amazon Q for development — history, install, CLI habits, and demo projects scaffolded with q chat.",
+      "hook": "Slide deck on Amazon Q for development \u2014 history, install, CLI habits, and demo projects scaffolded with q chat.",
       "repo": "https://github.com/jajera/amazon-q-cli-slides"
     },
     {
@@ -44,7 +44,7 @@
         "service-networking"
       ],
       "url": "https://jajera.github.io/aws-community-day-aotearoa-2025-vpclattice-talk/",
-      "hook": "Talk resources for modern service networking with VPC Lattice — agenda, links, and a Terraform example.",
+      "hook": "Talk resources for modern service networking with VPC Lattice \u2014 agenda, links, and a Terraform example.",
       "repo": "https://github.com/jajera/aws-community-day-aotearoa-2025-vpclattice-talk"
     },
     {
@@ -62,12 +62,12 @@
         "bedrock"
       ],
       "url": "https://jajera.github.io/hackathon-2025-iam-policy-guard/",
-      "hook": "Serverless IAM guard that detects dangerous policy changes and remediates them in seconds — Lambda Hackathon 2025.",
+      "hook": "Serverless IAM guard that detects dangerous policy changes and remediates them in seconds \u2014 Lambda Hackathon 2025.",
       "repo": "https://github.com/jajera/hackathon-2025-iam-policy-guard"
     },
     {
       "slug": "2026-04-07-greenfield-eks-standard-vs-auto-mode",
-      "title": "Greenfield EKS — Standard vs Auto Mode",
+      "title": "Greenfield EKS \u2014 Standard vs Auto Mode",
       "date": "2026-04-07",
       "type": "article",
       "category": "containers",
@@ -79,7 +79,7 @@
         "decision-guide"
       ],
       "url": "https://dev.to/jajera/greenfield-eks-choosing-standard-eks-vs-eks-auto-mode-without-legacy-baggage-39f3",
-      "hook": "Practical greenfield guide to choosing Standard EKS versus EKS Auto Mode — cost, who runs what, and a decision rubric without legacy baggage."
+      "hook": "Practical greenfield guide to choosing Standard EKS versus EKS Auto Mode \u2014 cost, who runs what, and a decision rubric without legacy baggage."
     },
     {
       "slug": "2026-06-18-aws-iot-walkthrough",
@@ -96,7 +96,7 @@
         "lambda"
       ],
       "url": "https://aws-iot-walkthrough.johna.kiwi/",
-      "hook": "Connect ESP32-S3 to AWS IoT Core — pretest flash and serial, then Terraform for rules, Lambda, DynamoDB, API, and Amplify dashboard.",
+      "hook": "Connect ESP32-S3 to AWS IoT Core \u2014 pretest flash and serial, then Terraform for rules, Lambda, DynamoDB, API, and Amplify dashboard.",
       "repo": "https://github.com/jajera/aws-iot-walkthrough"
     },
     {
@@ -113,12 +113,12 @@
         "vpc"
       ],
       "url": "https://amazon-vpc-ipam-multi-account-walkthrough.johna.kiwi/",
-      "hook": "Org-wide VPC IPAM across four accounts and two regions — delegated admin, RAM pool sharing, and pool-backed workload VPCs.",
+      "hook": "Org-wide VPC IPAM across four accounts and two regions \u2014 delegated admin, RAM pool sharing, and pool-backed workload VPCs.",
       "repo": "https://github.com/jajera/amazon-vpc-ipam-multi-account-walkthrough"
     },
     {
       "slug": "2026-06-20-aws-gcp-interconnect",
-      "title": "AWS–GCP Interconnect",
+      "title": "AWS\u2013GCP Interconnect",
       "date": "2026-06-20",
       "type": "walkthrough",
       "category": "networking",
@@ -130,7 +130,7 @@
         "private-connectivity"
       ],
       "url": "https://aws-gcp-interconnect-walkthrough.johna.kiwi/",
-      "hook": "Private connectivity between AWS and GCP — no VPN, no colocation, no public internet.",
+      "hook": "Private connectivity between AWS and GCP \u2014 no VPN, no colocation, no public internet.",
       "repo": "https://github.com/jajera/aws-gcp-interconnect-walkthrough"
     },
     {
@@ -147,7 +147,7 @@
         "fargate"
       ],
       "url": "https://ecs-express-mode-walkthrough.johna.kiwi/",
-      "hook": "Deploy HTTP/HTTPS containers on ECS with a single Terraform resource — managed ALB, auto scaling, and HTTPS URL included.",
+      "hook": "Deploy HTTP/HTTPS containers on ECS with a single Terraform resource \u2014 managed ALB, auto scaling, and HTTPS URL included.",
       "repo": "https://github.com/jajera/ecs-express-mode-walkthrough"
     },
     {
@@ -163,7 +163,7 @@
         "iam"
       ],
       "url": "https://aws-lambda-managed-instance-walkthrough.johna.kiwi/",
-      "hook": "Theory-first guide to Lambda Managed Instances — fundamentals, quotas, and hands-on walkthrough pages as they publish.",
+      "hook": "Theory-first guide to Lambda Managed Instances \u2014 fundamentals, quotas, and hands-on walkthrough pages as they publish.",
       "repo": "https://github.com/jajera/aws-lambda-managed-instance-walkthrough"
     },
     {
@@ -181,7 +181,7 @@
         "terraform"
       ],
       "url": "https://s3-files-workloads.johna.kiwi/",
-      "hook": "Mount an S3 bucket as an NFS file system on EC2, ECS Fargate, and Lambda — CLI and Terraform paths.",
+      "hook": "Mount an S3 bucket as an NFS file system on EC2, ECS Fargate, and Lambda \u2014 CLI and Terraform paths.",
       "repo": "https://github.com/jajera/s3-files-workloads"
     },
     {
@@ -215,7 +215,7 @@
         "terraform"
       ],
       "url": "https://route53-classic-multi-account-walkthrough.johna.kiwi/",
-      "hook": "Share one private hosted zone across three accounts and two regions — classic VPC association authorization, no Profiles or RAM.",
+      "hook": "Share one private hosted zone across three accounts and two regions \u2014 classic VPC association authorization, no Profiles or RAM.",
       "repo": "https://github.com/jajera/route53-classic-multi-account-walkthrough"
     },
     {
@@ -232,7 +232,7 @@
         "terraform"
       ],
       "url": "https://s3-annotations-walkthrough.johna.kiwi/",
-      "hook": "Attach structured JSON metadata to S3 objects — demonstrated on GeoNet volcano camera imagery from Te Kaha.",
+      "hook": "Attach structured JSON metadata to S3 objects \u2014 demonstrated on GeoNet volcano camera imagery from Te Kaha.",
       "repo": "https://github.com/jajera/terraform-aws-s3-annotations-demo"
     },
     {
@@ -250,7 +250,7 @@
         "terraform"
       ],
       "url": "https://s3-vectors-rag-workload.johna.kiwi/",
-      "hook": "Vector search without a vector database — Amazon S3 Vectors, Bedrock embeddings, and a serverless RAG app.",
+      "hook": "Vector search without a vector database \u2014 Amazon S3 Vectors, Bedrock embeddings, and a serverless RAG app.",
       "repo": "https://github.com/jajera/s3-vectors-rag-workload"
     },
     {
@@ -286,7 +286,7 @@
         "multi-account"
       ],
       "url": "https://aws-private-connectivity-patterns-walkthrough.johna.kiwi/",
-      "hook": "Deploy and compare five private cross-account patterns — VPC Peering, PrivateLink, VPC Lattice, Transit Gateway, and Cloud WAN.",
+      "hook": "Deploy and compare five private cross-account patterns \u2014 VPC Peering, PrivateLink, VPC Lattice, Transit Gateway, and Cloud WAN.",
       "repo": "https://github.com/jajera/aws-private-connectivity-patterns-walkthrough"
     },
     {
@@ -304,7 +304,7 @@
         "productivity"
       ],
       "url": "https://pr-readiness-coach-walkthrough.johna.kiwi/",
-      "hook": "AI coach that checks branch readiness before you open a pull request — local CLI, AWS API, GitHub Actions comments, Kiro hooks, and an owner UI.",
+      "hook": "AI coach that checks branch readiness before you open a pull request \u2014 local CLI, AWS API, GitHub Actions comments, Kiro hooks, and an owner UI.",
       "repo": "https://github.com/jajera/pr-readiness-coach"
     },
     {
@@ -321,7 +321,7 @@
         "aws-builder-center"
       ],
       "url": "https://builder.aws.com/content/3GTOz2yP0In7OD0EpIntARL4lgJ/kiro-birthday-2026-challenge-day-1-hook",
-      "hook": "Kiro Birthday Week Day 1 — a docs sync check hook, with Builder Center write-up, demo video, and LinkedIn share."
+      "hook": "Kiro Birthday Week Day 1 \u2014 a docs sync check hook, with Builder Center write-up, demo video, and LinkedIn share."
     },
     {
       "slug": "2026-07-15-bind-to-route53-mirror",
@@ -373,7 +373,7 @@
         "multi-account"
       ],
       "url": "https://privatelink-conduit.johna.kiwi/",
-      "hook": "Cross-account PrivateLink into a private 3-tier API — same-Region Sydney, cross-Region Melbourne, and why New Zealand cannot join the cross-Region path today.",
+      "hook": "Cross-account PrivateLink into a private 3-tier API \u2014 same-Region Sydney, cross-Region Melbourne, and why New Zealand cannot join the cross-Region path today.",
       "repo": "https://github.com/jajera/privatelink-conduit"
     },
     {
@@ -462,7 +462,7 @@
         "gitops"
       ],
       "url": "https://kueue-eks-walkthrough.johna.kiwi/",
-      "hook": "Deploy Kueue on Amazon EKS Auto Mode with eksctl and GitOps — cap concurrent batch jobs and share quota across projects."
+      "hook": "Deploy Kueue on Amazon EKS Auto Mode with eksctl and GitOps \u2014 cap concurrent batch jobs and share quota across projects."
     },
     {
       "slug": "2026-08-23-buildpacks-eks-walkthrough",
@@ -480,7 +480,7 @@
         "gitops"
       ],
       "url": "https://buildpacks-eks-walkthrough.johna.kiwi/",
-      "hook": "Prove buildpacks on EKS — platform-owned image builds, app teams push code only."
+      "hook": "Prove buildpacks on EKS \u2014 platform-owned image builds, app teams push code only."
     },
     {
       "slug": "2026-08-30-amplify-astro-cicd-walkthrough",
@@ -562,7 +562,7 @@
         "cost"
       ],
       "url": "https://pl-vs-inspected-tgw.johna.kiwi/",
-      "hook": "One live stream, two paths — clock PrivateLink against a TGW inspection hairpin, then keep the path that wins on latency and cost.",
+      "hook": "One live stream, two paths \u2014 clock PrivateLink against a TGW inspection hairpin, then keep the path that wins on latency and cost.",
       "repo": "https://github.com/jajera/pl-vs-inspected-tgw"
     },
     {
@@ -579,7 +579,7 @@
         "networking"
       ],
       "url": "https://tgw-policy-based-routing-walkthrough.johna.kiwi/",
-      "hook": "Same private IP, two paths — prove Transit Gateway Policy-Based Routing sends HTTPS via the hub while HTTP goes direct.",
+      "hook": "Same private IP, two paths \u2014 prove Transit Gateway Policy-Based Routing sends HTTPS via the hub while HTTP goes direct.",
       "repo": "https://github.com/jajera/tgw-policy-based-routing"
     },
     {
@@ -614,7 +614,7 @@
         "dual-az"
       ],
       "url": "https://aws-ntripcaster-ha-patterns.johna.kiwi/",
-      "hook": "BKG’s caster fans GNSS streams but won’t fail over. Prove a normal relay-IPort first, then bolt on dual-AZ L4 and multi-region DNS — one stack at a time.",
+      "hook": "BKG\u2019s caster fans GNSS streams but won\u2019t fail over. Prove a normal relay-IPort first, then bolt on dual-AZ L4 and multi-region DNS \u2014 one stack at a time.",
       "repo": "https://github.com/jajera/aws-ntripcaster-ha-patterns"
     },
     {
@@ -651,7 +651,7 @@
         "subscriber"
       ],
       "url": "https://aws-eventbridge-enhanced-bus.johna.kiwi/",
-      "hook": "One enhanced bus shared with RAM, a FIFO Subscriber that owns its filter, and ordered health alerts in another account — without bus-to-bus hops.",
+      "hook": "One enhanced bus shared with RAM, a FIFO Subscriber that owns its filter, and ordered health alerts in another account \u2014 without bus-to-bus hops.",
       "repo": "https://github.com/jajera/aws-eventbridge-enhanced-bus"
     },
     {
@@ -670,7 +670,7 @@
         "cost"
       ],
       "url": "https://aws-route53-central-outbound.johna.kiwi/",
-      "hook": "When several VPCs need the same corporate zone, decide between per-account outbound endpoints and one hub shared with RAM — and when a local escape hatch is worth the extra ENIs.",
+      "hook": "When several VPCs need the same corporate zone, decide between per-account outbound endpoints and one hub shared with RAM \u2014 and when a local escape hatch is worth the extra ENIs.",
       "repo": "https://github.com/jajera/aws-route53-central-outbound"
     },
     {
@@ -688,7 +688,7 @@
         "ble"
       ],
       "url": "https://meshtastic-heltec-v4-walkthrough.johna.kiwi/",
-      "hook": "Flash a Heltec WiFi LoRa 32 V4 with Meshtastic from a clean desk — bootloader, web flasher, region, then prove the node is alive.",
+      "hook": "Flash a Heltec WiFi LoRa 32 V4 with Meshtastic from a clean desk \u2014 bootloader, web flasher, region, then prove the node is alive.",
       "repo": "https://github.com/jajera/meshtastic-heltec-v4-walkthrough"
     },
     {
@@ -706,8 +706,27 @@
         "ble"
       ],
       "url": "https://meshcore-heltec-v4-walkthrough.johna.kiwi/",
-      "hook": "Flash a Heltec WiFi LoRa 32 V4 with MeshCore Companion Bluetooth — bootloader, web flasher, radio preset, then pair the app.",
+      "hook": "Flash a Heltec WiFi LoRa 32 V4 with MeshCore Companion Bluetooth \u2014 bootloader, web flasher, radio preset, then pair the app.",
       "repo": "https://github.com/jajera/meshcore-heltec-v4-walkthrough"
+    },
+    {
+      "slug": "2026-10-10-aws-iot-greengrass-v2-edge-walkthrough",
+      "title": "Greengrass V2 edge greenhouse",
+      "date": "2026-10-10",
+      "type": "walkthrough",
+      "category": "iot",
+      "tags": [
+        "greengrass",
+        "iot-core",
+        "esp32",
+        "nuc",
+        "mqtt",
+        "sagemaker",
+        "onnx"
+      ],
+      "url": "https://aws-iot-greengrass-v2-edge-walkthrough.johna.kiwi/",
+      "hook": "Greengrass V2 on a NUC core with ESP32-S3 zones \u2014 LAN closed loop first, then AWS CLI wiring for archive, alarms, cloud commands, and on-device ONNX.",
+      "repo": "https://github.com/jajera/aws-iot-greengrass-v2-edge-walkthrough"
     }
   ]
 }

@@ -7,6 +7,9 @@ tags: [eventbridge, eventsv2, ram, multi-account, cli, fifo, subscriber]
 summary: One enhanced bus shared with RAM, a FIFO Subscriber that owns its filter, and ordered health alerts in another account — without bus-to-bus hops.
 walkthrough_url: https://aws-eventbridge-enhanced-bus.johna.kiwi/
 demo_url: https://github.com/jajera/aws-eventbridge-enhanced-bus
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3KhGXHHHXyA6CNHBob5vJ8WNjRX/aws-community-builders-spotlight-mega-rewind
 draft: false
 ---
 

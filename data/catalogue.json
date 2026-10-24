@@ -762,6 +762,25 @@
       "url": "https://aws-lambda-web-functions-walkthrough.johna.kiwi/",
       "hook": "Run the same Node.js HTTP server on Lambda \u2014 console create, curl prove, logs, optional Express, and teardown.",
       "repo": "https://github.com/jajera/aws-lambda-web-functions-walkthrough"
+    },
+    {
+      "slug": "2026-10-24-esp32-s3-seismo",
+      "title": "ESP32-S3 desk seismometer",
+      "date": "2026-10-24",
+      "type": "walkthrough",
+      "category": "iot",
+      "tags": [
+        "esp32s3",
+        "lsm6dso",
+        "st7789",
+        "stalta",
+        "mmi",
+        "platformio",
+        "zensical"
+      ],
+      "url": "https://esp32-s3-seismo.johna.kiwi/",
+      "hook": "Wire an ESP32-S3, LSM6DSO, and ST7789 on Ubuntu, then flash phase folders until a desk thump lights EVENT and a Wald-style MMI on the TFT.",
+      "repo": "https://github.com/jajera/esp32-s3-seismo"
     }
   ]
 }

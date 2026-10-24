@@ -10,8 +10,8 @@ demo_url: https://github.com/jajera/esp32-gnss-field
 draft: false
 ---
 
-Another parts pile — CH340 DevKit, a cheap ATGM336H, square ST7789 — aimed at a **portable field node**, not a survey rover. Antenna to the sky, NMEA on UART, fix quality and lat/lon on the glass.
+Parts pile on the breadboard — a classic ESP32 DevKit, a cheap ATGM336H, and a 240×240 ST7789 — aimed at a **portable field node**, not a survey rover. Antenna to the sky, NMEA on UART, fix quality and lat/lon on the glass.
 
-Same rhythm as the desk seismo lab: clean Ubuntu, erase, hello, power TFT then GNSS, raw NMEA, parse, colour fill, then the field UI. Each phase freezes a `firmware/<nn>-…/` folder so you can replay; SoftAP, SD, PPS, and NTRIP wait for later folders.
+Start from a clean Ubuntu box, erase the chip, prove hello serial, power TFT then GNSS, stream raw NMEA, parse, colour fill, then land on the field UI. Each phase freezes a `firmware/<nn>-…/` folder so you can replay; SoftAP, SD, PPS, and NTRIP wait for later folders.
 
 Consumer GNSS without corrections is metre-class at best. Take it outside, wait for green **FIX 3D**, enjoy the readout — don’t stake a boundary with it.

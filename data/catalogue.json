@@ -781,6 +781,25 @@
       "url": "https://esp32-s3-seismo.johna.kiwi/",
       "hook": "Wire an ESP32-S3, LSM6DSO, and ST7789 on Ubuntu, then flash phase folders until a desk thump lights EVENT and a Wald-style MMI on the TFT.",
       "repo": "https://github.com/jajera/esp32-s3-seismo"
+    },
+    {
+      "slug": "2026-10-25-esp32-gnss-field",
+      "title": "ESP32 GNSS field node",
+      "date": "2026-10-25",
+      "type": "walkthrough",
+      "category": "iot",
+      "tags": [
+        "esp32",
+        "atgm336h",
+        "st7789",
+        "nmea",
+        "gnss",
+        "platformio",
+        "zensical"
+      ],
+      "url": "https://esp32-gnss-field.johna.kiwi/",
+      "hook": "Wire a classic ESP32, ATGM336H, and 240\u00d7240 ST7789 on Ubuntu, then flash phase folders until an outdoor 3D fix paints green on the TFT.",
+      "repo": "https://github.com/jajera/esp32-gnss-field"
     }
   ]
 }

@@ -905,6 +905,24 @@
       "url": "https://proxmox-ve-walkthrough.johna.kiwi/",
       "hook": "Install Proxmox VE on spare x86_64 hardware — verify the ISO, write a USB stick, run the graphical installer with a ZFS mirror or single-disk ext4 layout, upgrade the host, then prove the web UI on port 8006.",
       "repo": "https://github.com/jajera/proxmox-ve-walkthrough"
+    },
+    {
+      "slug": "2026-11-11-esp32-s3-ha-climate",
+      "title": "ESP32-S3 Home Assistant climate node",
+      "date": "2026-11-11",
+      "type": "walkthrough",
+      "category": "iot",
+      "tags": [
+        "esp32s3",
+        "sht40",
+        "st7789",
+        "esphome",
+        "home-assistant",
+        "zensical"
+      ],
+      "url": "https://esp32-s3-ha-climate.johna.kiwi/",
+      "hook": "Build an ESP32-S3 climate sensor with SHT40 and ST7789, onboard via SoftAP QR, and adopt it in Home Assistant with ESPHome.",
+      "repo": "https://github.com/jajera/esp32-s3-ha-climate"
     }
   ]
 }

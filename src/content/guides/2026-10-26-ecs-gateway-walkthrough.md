@@ -7,6 +7,9 @@ tags: [ecs, gateway, alb, fargate, ec2, awsvpc]
 summary: Platform owns the gateway once; app teams opt in with a connector and get an HTTPS hostname on a shared ALB — Fargate or EC2, same VPC pattern.
 walkthrough_url: https://ecs-gateway-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/ecs-gateway-walkthrough
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3LyBpPUFQX40zNWBmoS5KFPPxFy/aws-community-builders-spotlight-november-2nd-edition
 draft: false
 ---
 

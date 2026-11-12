@@ -7,6 +7,9 @@ tags: [greengrass, iot-core, esp32, nuc, mqtt, sagemaker, onnx]
 summary: Greengrass V2 on a NUC core with ESP32-S3 zones — LAN closed loop first, then AWS CLI wiring for archive, alarms, cloud commands, and on-device ONNX.
 walkthrough_url: https://aws-iot-greengrass-v2-edge-walkthrough.johna.kiwi/
 demo_url: https://github.com/jajera/aws-iot-greengrass-v2-edge-walkthrough
+recognition:
+  label: Builders Spotlight
+  url: https://builder.aws.com/content/3L0q6ZhRbuf6RNlcwTxhqrleach/aws-community-builders-spotlight-october-12th-edition
 draft: false
 ---
 
